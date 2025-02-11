@@ -4,7 +4,7 @@
 
 In asynchronous programming, you can do tasks without waiting for a task to complete its execution. Even when a long-running task starts, the remaining program code continues to run and when the task gets complete, the program is informed and gets access to the result. In short, you can run some code in the background while the main code continues getting executed. Thus, this helps in utilization of time & resources.
 
-the **Web APIs** and **event loop(stack->webapi->queue->stack(until queue's become empty)** work together to make JavaScript exhibit asynchronous behaviour.
+the **Web APIs** and **[event loop]('../../../../nodeJs/Fundamentals/chapter1.md')(stack->webapi->queue->stack(until queue's become empty)** work together to make JavaScript exhibit asynchronous behaviour.
 
 
 ## **This keyword**
@@ -25,7 +25,7 @@ Suppose you have a long-running task and you cannot decide how much time it will
 2. **Execute a task after a long-running task:**
 Suppose you have a long-running task and you cannot decide how much time it will take to finish its execution but you know that you need to perform some other task whenever the long-running function finishes its execution. In such a case, you can use a callback which contains the other task to be carried out after the execution of a long-running task. Also, this callback will be invoked after the long-running task has finished.
 
-**callback is not a keyword but just the name given to a parameter to hold a function. You can name it whatever you like, but just keep it meaningful.**
+> **callback is not a keyword but just the name given to a parameter to hold a function. You can name it whatever you like, but just keep it meaningful.**
 
 > note: passing a function inside a function gives us ability to solve some asynchronous programming problem, thus we refers those passed as a argument functions as callback function.(the functions can be anoumous or independent, named based on the requirement of that function)
 
@@ -40,23 +40,26 @@ To solve callback hell we use promises
   **Consumer Code:** The code that consumes the result produced by the producer code
 
 2. A promise is an object which makes the result produced by the producer code available to the consumer code, thus linking them together.
-3.The producer code is contained inside the promise object.
-4.The producer code, which is inside the promise object, contains resolve & reject callbacks.
-5.The producer code is executed as soon as the promise object is created. You do not need to explicitly call the producer code.
+
+3. The producer code is contained inside the promise object.
+4. The producer code, which is inside the promise object, contains resolve & reject callbacks.
+5. The producer code is executed as soon as the promise object is created. You do not need to explicitly call the producer code.
 
 ```js
 syntax:
 let promiseObj = new Promise((resolve, reject) => {
     // producer code
+    //resolve(), if you want to resolve the promise
+    //reject(), if you wnat to reject the promise
 });
 ```
 
 result produced by the producer code may either be a:
 
 - **Success**
-When the result of the producer code is success, the resolve() callback is invoked to resolve the promise object.
+When the result of the producer code is success, the resolve() callback is invoked(by the user) to resolve the promise object.
 - **Failure**
-When the result of the producer code is failure, the reject() callback is invoked to reject the promise object.
+When the result of the producer code is failure, the reject() callback is invoked(by the user) to reject the promise object.
 
 
 ## **'then' & 'catch' Methods as Consumers**
@@ -90,7 +93,7 @@ The parameter to this 'promiseobj' methods will be those argument which are bein
 
 ## **Introduction to 'async' & 'await'**
 
-1. async & await keywords were introduced in ES8 (ES2017), which are internally based on promises but makes the code even more readable as compared to promises.
+1. async & await keywords were introduced in ES8 (ES2017), which are internally based on promises but makes the code even more readable as compared to promises with `.then()` and `.catch`
  
 
 2. When the keyword async is prepended to a function, it can be safely assumed that a promise is returned from that function. Even if the function does not explicitly return a promise object, it is made to implicitly return a promise object after resolving it with the value that is returned from the function.
