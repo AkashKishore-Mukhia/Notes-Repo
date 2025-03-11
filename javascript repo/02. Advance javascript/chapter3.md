@@ -1,4 +1,4 @@
-# **Introduction to Asynchronous JavaScript**
+`# **Introduction to Asynchronous JavaScript**
 
 **JavaScript is a single-threaded synchronous language which executes all the code line by line in the order in which it is written.**
 
