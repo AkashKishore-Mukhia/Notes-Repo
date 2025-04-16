@@ -1,5 +1,5 @@
 // Type Coercion
-    // Type coercion is automatic conversion of one data type to another by javascript during operations. This is also know as implicit type casting
+    /* Type coercion is automatic conversion of one data type to another by javascript during operations. This is also know as implicit type casting */
 
 // Example of type coercion
 

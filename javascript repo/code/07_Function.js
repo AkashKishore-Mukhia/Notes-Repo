@@ -7,12 +7,12 @@
 */
 
 // Immediatly Invoked Function Expression
-    // (function () {
-    //     console.log(2**5);   
-    // }) ();
+    (function () {
+        console.log(2**5);   
+    }) ();
 
 // Callback Function
-    // A callback is a function passed into another function as an argument, which is then invoked inside the outer function to complete some kind of action.
+    /* A callback is a function passed into another function as an argument, which is then invoked inside the outer function to complete some kind of action. */
     function num(n, double) {
         console.log(double(n)); // calling callback function inside outer function num.
     }
