@@ -2,10 +2,10 @@
 
 # Author: Akash Mukhia
 
-# Description
+# Description:
 # Script will create a backup of the current working directory
 
-#Usage
+#Usage:
 # bash <script-name>
 
 echo backup in-progress...
