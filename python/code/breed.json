@@ -1,0 +1,26 @@
+{
+  "data": {
+    "id": "f9643a80-af1d-422a-9f15-18d466822053",
+    "type": "breed",
+    "attributes": {
+      "name": "Caucasian Shepherd Dog",
+      "life": {
+        "min": 15,
+        "max": 20
+      },
+      "male_weight": {
+        "min": 50,
+        "max": 100
+      },
+      "female_weight": {
+        "min": 50,
+        "max": 100
+      },
+      "description": "The Caucasian Shepherd dog is a serious guardian breed and should never be taken lightly.",
+      "hypoallergenic": false
+    }
+  },
+  "links": {
+    "self": "https://dogapi.dog/api/v2/breeds/f9643a80-af1d-422a-9f15-18d466822053"
+  }
+}{"uid": "394jdndk-sdfjntla9thda"}
