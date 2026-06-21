@@ -12,7 +12,7 @@ Unlike rest's fixed endpoints, GraphQL uses a single endpoint with a query langu
 3. **RPC(Remote Procedure Call) -**
 RPC protocols like gRPC use binary serialization and HTTP/2 for efficient communication between services. If interviewer mentions microservices or internal APIs, consider RPC for those high-performance connections.
 
-<!-- ![](../../Resources/Images/system-design/API%20Types%20flow.png) -->
+![](../../Resources/Images/system-design/API%20Types%20flow.png)
 
 ## **REST**
 
